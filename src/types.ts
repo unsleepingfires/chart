@@ -1,5 +1,5 @@
-interface Inner {
-  lead: number[];
+export interface Inner {
+  lead: number;
 }
 export interface FetchedData {
   id: number;
@@ -7,4 +7,8 @@ export interface FetchedData {
 }
 export interface GameObject {
   [key: number]: number[];
+}
+
+export interface Outer {
+  [key: number]: Inner[];
 }

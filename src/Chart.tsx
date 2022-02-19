@@ -1,12 +1,13 @@
 import { LineChart, XAxis, Tooltip, CartesianGrid, Line } from "recharts";
+import { Inner } from "./types";
 
-const Chart = () => {
+const Chart = ({game} : {game : Inner[]}) => {
   return (
     <div>
       <LineChart
         width={1000}
         height={400}
-        data={[{ lead: 2 }, { lead: 4 }, { lead: 5 }]}
+        data={game}
         margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
       >
         <XAxis dataKey="name" />
